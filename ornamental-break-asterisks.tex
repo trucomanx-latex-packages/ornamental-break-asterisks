@@ -1,0 +1,103 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{lipsum}
+\usepackage[margin=25mm]{geometry}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usepackage[
+AsteriskCount=5,
+BeforeSpace=0pt,
+AfterSpace=0pt,
+Symbol=*
+]{ornamental-break-asterisks}
+
+
+%opening
+\title{ornamental-break-asterisks package}
+\author{Fernando Pujaico Rivera}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Creates macros to show ornamental breaks.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Install package}
+Put the ornamental-break-asterisks.sty file in any of these locations
+\begin{itemize}
+\item Put the \texttt{ornamental-break-asterisks.sty} file in the same path of main tex file, or.
+\item Execute the commmand:
+\begin{mdframed}[backgroundcolor=black!10,rightline=false,leftline=false]
+\begin{verbatim}
+kpsewhich -var-value=TEXMFHOME
+\end{verbatim}
+\end{mdframed}
+and this returns the path of local tex files. By example, if returns 
+\begin{mdframed}[backgroundcolor=black!10,rightline=false,leftline=false]
+\begin{verbatim}
+/home/username/texmf
+\end{verbatim}
+\end{mdframed}
+then, put the \texttt{ornamental-break-asterisks.sty} file in the directory.
+\begin{mdframed}[backgroundcolor=black!10,rightline=false,leftline=false]
+\small
+\begin{verbatim}
+/home/username/texmf/tex/latex/ornamental-break-asterisks/ornamental-break-asterisks.sty
+\end{verbatim}
+\end{mdframed}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Load the package}
+To load the package use the next command in the preamble of main tex document.
+
+\begin{mdframed}[backgroundcolor=black!10,rightline=false,leftline=false]
+\begin{verbatim}
+\usepackage[
+AsteriskCount=5,
+BeforeSpace=0pt,
+AfterSpace=0pt,
+Symbol=*
+]{ornamental-break-asterisks}
+\end{verbatim}
+\end{mdframed}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Using the package}
+Next, I will provide examples that demonstrate the use of all the macros included in the package. 
+This will help illustrate how each macro functions within the context of the package and provide 
+practical insights into their applications.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{verbatim}
+\lipsum[1][1-4]
+
+\OrnamentalBreak
+
+\lipsum[1][1-4]
+\end{verbatim}
+
+\lipsum[1][1-4]
+
+\OrnamentalBreak
+
+\lipsum[1][1-4]
+
+
+\end{document}
